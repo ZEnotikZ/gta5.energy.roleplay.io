@@ -1,0 +1,198 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  background-color: #333;
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header-logo img {
+  width: 100px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.header-nav-list li {
+  margin-right: 20px;
+}
+
+.header-nav-list a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.index_row {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+
+.section_frst_row {
+  display: flex;
+}
+
+.hts_box {
+  display: flex;
+}
+
+.hts_right_side img {
+  width: 100%;
+}
+
+.hts_left_side,
+.hts_right_side {
+  flex: 1;
+}
+
+.hts_tittle {
+  display: flex;
+  align-items: center;
+}
+
+.hts_tittle span {
+  margin-right: 10px;
+}
+
+.hts_tittle h1 {
+  font-size: 24px;
+}
+
+.path_download {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.path_download_left,
+.path_download_right {
+  flex: 1;
+}
+
+.path_download_center_line_box {
+  position: relative;
+}
+
+.path_download_center_line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 10%;
+  background-color: #333;
+  transform: translate(-40%, -50%);
+}
+
+.download-button a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.download-button-muted {
+  margin-left: 10px;
+  color: #666;
+}
+
+
+.section_scnd_row_hts {
+  display: flex;
+  align-items: center;
+}
+
+.server_left {
+  flex: 1;
+}
+
+.servers_list_hts_li {
+  list-style: none;
+  padding: 0;
+}
+
+.servers_list_hts li {
+  margin-bottom: 20px;
+}
+
+.server_box_hts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.server_box_left_side,
+.server_box_center_side {
+  flex: 1;
+}
+
+.server_box_right_side_hts {
+  margin-left: 20px;
+}
+
+.copy-server-ip img {
+  width: 20px;
+  cursor: pointer;
+}
+
+
+.section_footer {
+  background-color: #333;
+  color: #fff;
+  padding: 100px;
+}
+
+.footer_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_left_row,
+.footer_right_row {
+  display: flex;
+  align-items: center;
+}
+
+.top_menu_row span {
+  margin-right: 10px;
+}
+
+.footer-bottom-logo img {
+  width: 200px;
+}
+
+.footer_right_row img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.anchor_box {
+  display: flex;
+  align-items: center;
+}
+

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="templates/phrp/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="templates/phrp/css/style2.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo img {
+            max-width: 50%;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-menu {
+            margin-right: 20px;
+        }
+  
+        .header-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .header-nav-list li {
+            margin-right: 20px;
+        }
+
+        .header-nav-list a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .header-nav-list a:hover {
+            color: #ffcc00;
+        }
+
+        .news-list {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .index_row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .description {
+            border: 2px solid #333;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .butt_social {
+            margin-top: 20px;
+        }
+
+        .start-to-play {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .soc_img {
+            margin-top: 10px;
+        }
+
+        .soc_img a {
+            margin-right: 10px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .section_scnd_row_content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section_scnd_left_row,
+        .section_scnd_right_row {
+            flex-basis: 48%;
+            margin: 10px;
+        }
+
+        .servers_list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .server_box {
+            border: 2px solid #333;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .server_box_members_percent {
+            background-color: #333;
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+
+        .server_box_members_percent span {
+            display: block;
+            height: 100%;
+            background-color: #f5f5f5;
+        }
+
+        .server_box_right_side a {
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .total-online {
+            margin-top: 20px;
+        }
+
+        .thrd_row_left_side,
+        .thrd_row_right_side {
+            flex-basis: 48%;
+            margin: 10px;
+        }
+
+        .title-decoration {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .title-decoration span {
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .title-decoration:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #333;
+            z-index: 0;
+        }
+
+        .thrd_row_social {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .thrd_row_social li {
+            flex-basis: 48%;
+        }
+
+        .social_list {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+            display: flex;
+        }
+
+        .social_list img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .social_list_info {
+            margin-left: 10px;
+        }
+
+        .social_list_info_box h3 {
+            margin: 0;
+        }
+
+        .social_list_info_box p {
+            margin: 5px 0;
+        }
+
+        .social_list_info_box a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .thrd_row_right_side_row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .thrd_row_right_side_border_box {
+            flex-basis: 48%;
+        }
+
+        .thrd_row_right_side_border {
+            border: 2px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .thrd_row_right_side_border img {
+            max-width: 100%;
+        }
+
+        .thrd_row_right_side_list {
+            flex-basis: 48%;
+        }
+
+        .thrd_row_dowload {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+
+        .section_left_row img {
+            max-width: 100%; 
+            height: auto; 
+        }
+        
+    </style>
+</head>
+
+<body id="main_anchor" class="how-to-start">
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="index.html"><img src="templates/phrp/images/logo.png" alt=""></a>
+            </div>
+            <div class="header-right">
+                <div class="header-menu">
+                    <nav class="header-nav">
+                        <div class="header-nav-close"></div>
+                        <ul class="header-nav-list">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="play.html">Инструкция по установке</a></li>
+                            <li><a href="donate.html">Пополнение игрового счёта</a></li>
+                            <li><a href="news.html">Короткий рассказ про наш проект</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <a href="play.html#" class="header-nav-trigger">
+                <span class="header-nav-trigger-line"></span>
+                <span class="header-nav-trigger-line"></span>
+                <span class="header-nav-trigger-line"></span>
+            </a>
+        </div>
+    </header>
+    <div class="news-list"></div>
+    <div class="index_row">
+        <div class="index_row_box">
+            <section class="section_frst_row">
+                <div class="section_left_row">
+                    <img src="templates/phrp/images/mans/index_man.jpg" alt="default">
+                </div>
+                <div class="section_right_row home-right-row-center">
+                    <div class="description">
+                        <p>"Energy Role Play" — это наш проект для игры с друзьями а так-же с другими игроками.</p>
+                        <p>Приветствую! Рады представить тебе наш игровой проект по GTA 5. Это захватывающая смесь увлекательного сюжета и захватывающего геймплея, созданного с любовью к деталям.</p>
+                    </div>
+                    <div class="butt_social">
+                        <a href="play.html" class="start-to-play">Начать играть</a>
+                        <div class="soc_img">
+                            <a target="_blank" href="#"><i class="fab fa-vk"></i></a>
+                            <a target="_blank" href="#"><i class="fab fa-youtube"></i></a>
+                            <a target="_blank" href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section_scnd_row">
+                <div class="section_scnd_row_content">
+                    <div class="section_scnd_left_row">
+                        <h2 class="title-decoration">
+                            <span>Наш список серверов</span>
+                        </h2>
+                        <ul class="servers_list">
+                            <li>
+                                <div class="server_box" data-server-id="1">
+                                    <div class="server_box_left_side">
+                                        <h3>1<p>сервер</p>
+                                        </h3>
+                                        <span>500/500</span>
+                                    </div>
+                                    <div class="server_box_center_side">
+                                        <p>Онлайн сервер</p>
+                                        <h3>ID: адрес на подключение </h3>
+                                        <div class="server_box_members_percent">
+                                            <span style="width: 10%"></span>
+                                        </div>
+                                    </div>
+                                    <div class="server_box_right_side">
+                                        <a href="index.html#" class="copy-server-ip"
+                                            data-server-ip="server.gta5-ph.com:22005"></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section_scnd_right_row home-news">
+                        <h2 class="title-decoration">
+                            <span>Новости</span>
+                        </h2>
+                        <ul class="news_row slick-init" id="news-list"></ul>
+                        <div class="new_js_article">
+                            <div class="new_js_article_nav"></div>
+                            <div class="more_news"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="index_thrd_row">
+                <div class="thrd_row_left_side">
+                    <title>Your Website Title</title>
+                    <style>
+                        
+                        body {
+                            font-family: 'Arial', sans-serif;
+                            margin: 0;
+                            padding: 0;
+                            background-color: #f0f0f0;
+                        }
+
+                        .container {
+                            display: flex;
+                            justify-content: space-between;
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            padding: 20px;
+                            background-color: #fff;
+                        }
+
+                        .social-list {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                        }
+
+                        .social-list li {
+                            margin-right: 20px;
+                        }
+
+                        .social-list img {
+                            max-width: 100px;
+                            height: auto;
+                        }
+
+                        .social-list-info {
+                            margin-left: 15px;
+                        }
+
+                        .social-list-info h3 {
+                            font-size: 1.5em;
+                            margin-bottom: 5px;
+                        }
+
+                        .social-list-info p {
+                            margin: 0;
+                        }
+
+                        .social-list-info a {
+                            text-decoration: none;
+                            color: #007bff;
+                            font-weight: bold;
+                        }
+
+                        .thrd-row-right-side {
+                            max-width: 600px;
+                            background-color: #fff;
+                            padding: 20px;
+                        }
+
+                        .thrd-row-right-side h1 {
+                            font-size: 2em;
+                            margin-bottom: 20px;
+                            color: #333;
+                        }
+
+                        .thrd-row-right-side-row {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .thrd-row-right-side-border-box {
+                            flex: 1;
+                            margin-right: 20px;
+                        }
+
+                        .thrd-row-right-side-border img {
+                            width: 100%;
+                            height: auto;
+                            border: 5px solid #fff;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        }
+
+                        .thrd-row-right-side-list ul {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                        }
+
+                        .thrd-row-right-side-list h3 {
+                            font-size: 1.5em;
+                            margin-bottom: 10px;
+                            color: #333;
+                        }
+
+                        .thrd-row-dowload p {
+                            margin: 0;
+                        }
+                        
+                    </style>
+                    </head>
+
+                    <body>
+
+                        <div class="container">
+                            <ul class="social-list">
+                                <li>
+                                    <div class="social-list">
+                                        <div class="social-list-img">
+                                            <img src="templates/phrp/images/mans/social_man_1.png">
+                                        </div>
+                                        <div class="social-list-info">
+                                            <div class="social-list-info-box">
+                                                <h3>Наша группа ВК</h3>
+                                                <p id='count_official'><span>Количество подписчиков</span>
+                                                </p>
+                                                <a href="https://vk.com/your_vk_group" target="_blank">Подписаться</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="social-list">
+                                        <div class="social-list-img">
+                                            <img src="templates/phrp/images/mans/social_man_2.png" class="soc_img_scnd">
+                                        </div>
+                                        <div class="social-list-info">
+                                            <div class="social-list-info-box">
+                                                <h3>Наша обычная группа</h3>
+                                                <p id="count_private"><span>Количество подписчиков </span></p>
+                                                <a href="https://vk.com/your_other_vk_group" target="_blank">Подписаться</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="thrd-row-right-side home-start-to-play">
+                                <h1 class="h1_inrow title-decoration">
+                                    <span>Как играть на сервере</span>
+                                </h1>
+                                <div class="thrd-row-right-side-row">
+                                    <div class="thrd-row-right-side-border-box">
+                                        <div class="thrd-row-right-side-border">
+                                            <img src="templates/phrp/images/ice_screenshot_20181211-235945.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="thrd-row-right-side-list">
+                                        <ul>
+                                            <li>
+                                                <div class="thrd-row-dowload">
+                                                    <h3>Нужно купить оригинальную игру Steam.</h3>
+                                                    <p>Как только вы купили игру Steam версии установите её.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thrd-row-dowload">
+                                                    <h3>Скачайте мультиплеер.</h3>
+                                                    <p>Нужно скачать мультиплеер и выбрать наш сервер.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="thrd-row-dowload">
+                                                    <h3>Как выбрать сервер.</h3>
+                                                    <p>Сервер можно выбрать в самом мультиплеере,и начать развивать персонажа. <p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
