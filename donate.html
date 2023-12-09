@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Донат</title>
+    <link rel="shortcut icon" href="templates/phrp/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="templates/phrp/css/style3.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        
+        }
+
+        
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo img {
+            width: 80px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .header-nav-list li {
+            margin-right: 20px;
+        }
+
+        .header-nav-list a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .header-nav-list a:hover {
+            color: #ffcc00;
+        }
+
+        
+        .index_row {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        
+        .section_frst_row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .login_left_box,
+        .login_right_box {
+            flex: 1;
+        }
+
+        .login_left_box {
+            background-image: url("templates/phrp/images/mans/donat_man.png");
+            background-size: cover;
+            border-radius: 200px;
+            overflow: hidden;
+            height: 290px;
+            
+        }
+
+        .login_right_box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input_row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .login_right_box_form_button {
+            text-align: center;
+        }
+
+        .donate-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .donate-button:hover {
+            background-color: #555;
+        }
+
+        
+        .donate_info_box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .donate_link_box a {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .donate_link_box a:hover {
+            color: #555;
+        }
+
+        
+
+        
+        .header-nav-list a {
+            position: relative;
+        }
+        
+        .header-nav-list a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        
+        .donate-button:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+
+        
+        input[type="text"]:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+       
+        .donate_link_box a:hover {
+            color: #555;
+        }
+        .login_left_box {
+    background-image: url("templates/phrp/images/mans/donat_man.png");
+    background-size: cover;
+    border-radius: 200px;
+    overflow: hidden;
+    height: 290px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.login_left_box:hover {
+    transform: scale(1.1); 
+}
+
+    </style>
+</head>
+
+<body id="main_anchor">
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="index.html"><img src="templates/phrp/images/logo.png" alt=""></a>
+            </div>
+            <div class="header-right">
+                <div class="header-menu">
+                    <nav class="header-nav">
+                        <div class="header-nav-close"></div>
+                        <ul class="header-nav-list">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="play.html">Инструкция по установке</a></li>
+                            <li><a href="donate.html">Пополнение игрового счёта</a></li>
+                            <li><a href="news.html">Короткий рассказ про наш проект</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <a href="donate.html#" class="header-nav-trigger">
+                <span class="header-nav-trigger-line"></span>
+                <span class="header-nav-trigger-line"></span>
+                <span class="header-nav-trigger-line"></span>
+            </a>
+        </div>
+    </header>
+    <div class="index_row donate-page">
+        <div class="index_row_box">
+            <section class="section_frst_row section_frst_row_login">
+                <div class="login_left_box"></div>
+                <div class="login_right_box">
+                    <div class="login_right_box_border"></div>
+                    <div class="login_right_box_form">
+                        <h3 class="hide error-status">
+                            <span></span>
+                        </h3>
+                        </h3>
+                        <form action="donate.html" method="post" onsubmit="return showNotification()">
+                            <div class="input_row">
+                                <input type="text" name="dsum" value="" placeholder="Введите сумму">
+                                <input class="input-text" name="dname" placeholder="Ваш никнейм" type="text">
+                            </div>
+                            <div class="input_row">
+                                <label for="cardNumber">Номер карты:</label>
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="Введите номер карты">
+                            </div>
+                            <div class="input_row">
+                                <label for="expiryDate">Дата окончания срока действия:</label>
+                                <input type="text" id="expiryDate" name="expiryDate" placeholder="ММ/ГГ">
+                            </div>
+                            <div class="input_row">
+                                <label for="cvv">CVV код:</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                            </div>
+                            <div class="input_row">
+                                <input type="checkbox" id="agreeCheckbox" name="agreeCheckbox">
+                                <label for="agreeCheckbox">Я соглашаюсь на покупку данной услуги</label>
+                            </div>
+                            <div class="login_right_box_form_button">
+                                <button type="submit" class="donate-button">
+                                    <span>Пополнить счет</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div id="notification" class="notification">
+                            <span id="notification-text"></span>
+                            <span class="close-btn" onclick="closeNotification()">×</span>
+                        </div>
+
+                        <script>
+                            function showNotification() {
+                                var notification = document.getElementById("notification");
+                                var notificationText = document.getElementById("notification-text");
+
+                               
+                                var cardNumber = document.getElementById("cardNumber").value;
+                                var expiryDate = document.getElementById("expiryDate").value;
+                                var cvv = document.getElementById("cvv").value;
+                                var agreeCheckbox = document.getElementById("agreeCheckbox").checked;
+
+                                if (!cardNumber || !expiryDate || !cvv || !agreeCheckbox) {
+                                    alert("Пожалуйста, введите все данные карты и согласитесь на условия покупки.");
+                                    return false;
+                                }
+
+                               
+                                var message = "Вы успешно пополнили свой игровой счёт на игровом сервере. Приятной игры!";
+
+                               
+                                notificationText.innerHTML = message;
+                                notification.style.display = "block";
+
+                               
+                                return false;
+                            }
+
+                            function closeNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "none";
+                            }
+                        </script>
+
+                    </div>
+                    </form>
+                </div>
+        </div>
+        </section>
+        <section class="section_frst_row">
+            <div class="donate_info_row">
+                <div class="donate_info_box">
+                    <p>В пополнении игрового счёта вы можете приобрести кредиты за реальные деньги. Наша система доната принимает платежи такие как: QIWI,Web-money,Kaspi Gold,Сбербанк,
+                        VISA,Fortebank,YouMoney,BitCoins и другие банки.</p>
+                </div>
+                <div class="donate_link_box">
+                    <div>
+                        <a href="instructions.html">Инструкция по пополнению игрового счета</a>
+                        <p>Введите желаемую сумму для пополнения.</p>
+                        <a href="what-to-buy.html">Что приобрести на эти деньги?</a>
+                        <p>Можно приобрести игровую валюту.</p>
+                    </div>
+                </div>
+                <div class="donate_link_box">
+                    <div>
+                        <a href="user-agreement.html">Пользовательское соглашение</a>
+                        <p>Пользовательское соглашение.
+                        Данное Пользовательское соглашение регулирует отношения между вами Игроком и проектом Energy Role Play при использовании наших услуг и продуктов.
+                        Используя наши услуги, вы соглашаетесь с условиями данного Соглашения.</p>
+                        <a href="payment-methods.html">Через что можно оплатить?</a>
+                        <p>Информация о доступных методах оплаты читайте выше.</p>
+                    </div>
+                
+    
